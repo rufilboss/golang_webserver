@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// Handles form error
 func formHandler(w http.ResponseWriter, r *http.Request) {
 	if err := r.ParseForm(); err != nil {
 		fmt.Fprintf(w, "Parseform() err: %v", err)
